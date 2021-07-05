@@ -276,6 +276,7 @@ void tampil(void)
     glVertex3f(35.0,-25.0,48.0);
     glEnd();
 
+
     //gedung 4.1.2
     glBegin(GL_QUADS);
     glColor3f(1.0,1.0,1.0);
@@ -539,6 +540,89 @@ void tampil(void)
     glVertex3f(-65.0,-15.0,15.0);
     glEnd();
 
+    //gedung 8.1
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(-20.0,-25.0,-22.0);
+    glVertex3f(-20.0,-10.0,-22.0);
+    glVertex3f(-10.0,-10.0,-12.0);
+    glVertex3f(-10.0,-25.0,-12.0);
+    glEnd();
+
+    //gedung 8.2
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(-10.0,-10.0,-12.0);
+    glVertex3f(-10.0,-25.0,-12.0);
+    glVertex3f(30.0,-25.0,-12.0);
+    glVertex3f(30.0,-10.0,-12.0);
+    glEnd();
+
+    //gedung 8.3
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(40.0,-10.0,-22.0);
+    glVertex3f(40.0,-25.0,-22.0);
+    glVertex3f(30.0,-25.0,-12.0);
+    glVertex3f(30.0,-10.0,-12.0);
+    glEnd();
+
+     //gedung 8.4
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(40.0,-10.0,-22.0);
+    glVertex3f(40.0,-25.0,-22.0);
+    glVertex3f(30.0,-25.0,-7.0);
+    glVertex3f(30.0,-10.0,-7.0);
+    glEnd();
+
+    //gedung 8.5
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(10.0,-10.0,-4.0);
+    glVertex3f(10.0,-25.0,-4.0);
+    glVertex3f(30.0,-25.0,-7.0);
+    glVertex3f(30.0,-10.0,-7.0);
+    glEnd();
+
+      //gedung 8.6
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(10.0,-10.0,-4.0);
+    glVertex3f(10.0,-25.0,-4.0);
+    glVertex3f(-10.0,-25.0,-7.0);
+    glVertex3f(-10.0,-10.0,-7.0);
+    glEnd();
+
+    //gedung 8.7
+    glBegin(GL_POLYGON);
+    glColor3f(0.7,0.0,0.0);
+    glVertex3f(-20.0,-25.0,-22.0);
+    glVertex3f(-20.0,-10.0,-22.0);
+    glVertex3f(-10.0,-10.0,-7.0);
+    glVertex3f(-10.0,-25.0,-7.0);
+    glEnd();
+
+    //gedung 8.8
+    glBegin(GL_POLYGON);
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-10.0,-10.0,-7.0);
+    glVertex3f(10.0,-10.0,-4.0);
+    glVertex3f(10.0,-10.0,-12.0);
+    glVertex3f(-10.0,-10.0,-12.0);
+    glVertex3f(-20.0,-10.0,-22.0);
+    glEnd();
+
+    //gedung 8.9
+    glBegin(GL_POLYGON);
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(30.0,-10.0,-7.0);
+    glVertex3f(10.0,-10.0,-4.0);
+    glVertex3f(10.0,-10.0,-12.0);
+    glVertex3f(30.0,-10.0,-12.0);
+    glVertex3f(40.0,-10.0,-22.0);
+    glEnd();
+
       //jembatan 1.1
     glBegin(GL_QUADS);
     glColor3f(1.0,1.0,1.0);
@@ -580,8 +664,8 @@ void tampil(void)
     glColor3f(1.0,1.0,1.0);
     glVertex3f(-1.5,-21.0,36.0);
     glVertex3f(-1.5,-18.0,36.0);
-    glVertex3f(-1.5,-18.0,5.0);
-    glVertex3f(-1.5,-21.0,5.0);
+    glVertex3f(-1.5,-18.0,15.0);
+    glVertex3f(-1.5,-21.0,15.0);
     glEnd();
 
     //jembatan 2.2
@@ -589,16 +673,16 @@ void tampil(void)
     glColor3f(1.0,1.0,1.0);
     glVertex3f(1.5,-21.0,36.0);
     glVertex3f(1.5,-18.0,36.0);
-    glVertex3f(1.5,-18.0,5.0);
-    glVertex3f(1.5,-21.0,5.0);
+    glVertex3f(1.5,-18.0,15.0);
+    glVertex3f(1.5,-21.0,15.0);
     glEnd();
 
     //jembatan 2.3
     glBegin(GL_QUADS);
     glColor3f(1.0,1.0,1.0);
     glVertex3f(-1.5,-18.0,36.0);
-    glVertex3f(-1.5,-18.0,5.0);
-    glVertex3f(1.5,-18.0,5.0);
+    glVertex3f(-1.5,-18.0,15.0);
+    glVertex3f(1.5,-18.0,15.0);
     glVertex3f(1.5,-18.0,36.0);
     glEnd();
 
@@ -606,9 +690,45 @@ void tampil(void)
     glBegin(GL_QUADS);
     glColor3f(1.0,1.0,1.0);
     glVertex3f(-1.5,-21.0,36.0);
-    glVertex3f(-1.5,-21.0,5.0);
-    glVertex3f(1.5,-21.0,5.0);
+    glVertex3f(-1.5,-21.0,15.0);
+    glVertex3f(1.5,-21.0,15.0);
     glVertex3f(1.5,-21.0,36.0);
+    glEnd();
+
+    //jembatan 3.1
+    glBegin(GL_QUADS);
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-1.5,-21.0,15.0);
+    glVertex3f(-1.5,-18.0,15.0);
+    glVertex3f(-5,-18.0,-7.0);
+    glVertex3f(-5,-21.0,-7.0);
+    glEnd();
+
+    //jembatan 3.2
+    glBegin(GL_QUADS);
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(1.5,-21.0,15.0);
+    glVertex3f(1.5,-18.0,15.0);
+    glVertex3f(-2.0,-18.0,-6.0);
+    glVertex3f(-2.0,-21.0,-6.0);
+    glEnd();
+
+    //jembatan 3.3
+    glBegin(GL_QUADS);
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-1.5,-18.0,15.0);
+    glVertex3f(-5.0,-18.0,-7.0);
+    glVertex3f(-2.0,-18.0,-6.0);
+    glVertex3f(1.5,-18.0,15.0);
+    glEnd();
+
+    //jembatan 3.4
+    glBegin(GL_QUADS);
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-1.5,-21.0,15.0);
+    glVertex3f(-5.0,-21.0,-7.0);
+    glVertex3f(-2.0,-21.0,-6.0);
+    glVertex3f(1.5,-21.0,15.0);
     glEnd();
 
     //jendela 1.1
@@ -881,3 +1001,5 @@ void ukuran(int lebar, int tinggi)
     glTranslated(0.0, -5.0, -150.0);
     glMatrixMode(GL_MODELVIEW);
 }
+
+
