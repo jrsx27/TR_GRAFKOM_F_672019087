@@ -4,9 +4,16 @@
 void init(void);
 void tampil(void);
 void keyboard(unsigned char, int, int);
+void mouse (int button, int state, int x, int y);
+void mouseMotion (int x, int y);
 void ukuran(int, int);
 
 int is_depth;
+float xrot = 0.0f;
+float yrot = 0.0f;
+float xdiff = 0.0f;
+float ydiff = 0.0f;
+float mouseDown = false;
 
 int main(int argc, char **argv)
 {
@@ -18,6 +25,8 @@ int main(int argc, char **argv)
     init();
     glutDisplayFunc(tampil);
     glutKeyboardFunc(keyboard);
+    glutMouseFunc(mouse);
+    glutMotionFunc(mouseMotion);
     glutReshapeFunc(ukuran);
     glutMainLoop();
     return 0;
@@ -40,7 +49,15 @@ void tampil(void)
     if (is_depth)
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     else
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT); 
+    
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();
+    gluLookAt(0.0f,0.0f,1.0f,0.0f,0.0f,0.0f,0.0f,1.0f,0.0f);
+    glRotatef(xrot, 1.0f, 0.0f, 0.0f);
+    glRotatef(yrot, 0.0f, 1.0f, 0.0f);
+    glPushMatrix();
+    
     //Tanah
     glBegin(GL_QUADS);
     glColor3f(0.4,0.7,0.2);
@@ -989,6 +1006,26 @@ void keyboard(unsigned char key, int x, int y)
 
     }
     tampil();
+}
+void mouse(int button, int state, int x, int y)
+{
+    if(button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+    {
+        mouseDown = true;
+        xdiff = x - yrot;
+        ydiff = -y + xrot;
+    }else{
+        mouseDown = false;
+    }
+}
+void mouseMotion(int x, int y)
+{
+    if(!mouseDown)
+    {
+        xrot = y + ydiff;
+        yrot = x- xdiff;
+        glutPostRedisplay();
+    }
 }
 
 void ukuran(int lebar, int tinggi)
