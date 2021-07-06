@@ -8,16 +8,16 @@
 void init(void);
 void tampil(void);
 void keyboard(unsigned char, int, int);
-void mouse (int button, int state, int x, int y);
-void mouseMotion (int x, int y);
+void mouse (int, int, int, int);
+void mouseMotion (int, int);
 void ukuran(int, int);
 
-int is_depth;
 float xrot = 0.0f;
 float yrot = 0.0f;
 float xdiff = 0.0f;
 float ydiff = 0.0f;
 float mouseDown = false;
+int is_depth;
 
 int main(int argc, char **argv)
 {
