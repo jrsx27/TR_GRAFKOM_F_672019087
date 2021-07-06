@@ -12,12 +12,12 @@ void mouse (int, int, int, int);
 void mouseMotion (int, int);
 void ukuran(int, int);
 
+int is_depth;
 float xrot = 0.0f;
 float yrot = 0.0f;
 float xdiff = 0.0f;
 float ydiff = 0.0f;
 float mouseDown = false;
-int is_depth;
 
 int main(int argc, char **argv)
 {
@@ -41,17 +41,19 @@ void init(void)
     glClearColor(0.0,0.0,0.0,0.0);
     glMatrixMode(GL_PROJECTION);
     glEnable(GL_DEPTH_TEST);
-    is_depth=1;
-    glMatrixMode(GL_MODELVIEW);
+    
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_COLOR_MATERIAL);
+    glMatrixMode(GL_PROJECTION);
     glPointSize(9.0);
     glLineWidth(6.0f);
+    glLoadIdentity();
 }
 void tampil(void)
 {
-    if (is_depth)
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    else
-        glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     //Tanah
     glBegin(GL_QUADS);
     glColor3f(0.4,0.7,0.2);
@@ -1179,9 +1181,7 @@ void tampil(void)
     glVertex3f(43.1,-22.0,8.0);
     glEnd();
 
-
-    glPushMatrix();
-    glPopMatrix();
+    glFlush();
     glutSwapBuffers();
 }
 
