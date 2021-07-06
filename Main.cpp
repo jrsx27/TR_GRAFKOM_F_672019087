@@ -34,7 +34,6 @@ int main(int argc, char **argv)
     glutReshapeFunc(ukuran);
     glutMainLoop();
     return 0;
-
 }
 
 void init(void)
@@ -46,7 +45,6 @@ void init(void)
     glMatrixMode(GL_MODELVIEW);
     glPointSize(9.0);
     glLineWidth(6.0f);
-
 }
 void tampil(void)
 {
