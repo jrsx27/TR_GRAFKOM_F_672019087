@@ -1,10 +1,11 @@
 // 672019087	Anugramidah Limbong Ma'dika (Ketua Kelompok)
 // 672019266	Emanuel Pabianan
-// 672019261	Junior Silambi 
+// 672019261	Junior Silambi
 // 672019272	Briliant Jeremy Pairunan
 #include<windows.h>
 #include<gl/glut.h>
 
+//untuk membuat variabel
 void init(void);
 void tampil(void);
 void keyboard(unsigned char, int, int);
@@ -20,6 +21,7 @@ int main(int argc, char **argv)
     glutInitWindowPosition(250, 80);
     glutCreateWindow("Kyusu University(Jepang)");
     init();
+    //untuk menampilkan display
     glutDisplayFunc(tampil);
     glutKeyboardFunc(keyboard);
     glutReshapeFunc(ukuran);
@@ -30,17 +32,23 @@ int main(int argc, char **argv)
 
 void init(void)
 {
+    //untuk menginisiasi mulai dari bacground
     glClearColor(0.0,0.0,0.0,0.0);
     glMatrixMode(GL_PROJECTION);
+    //depth test untuk kedalaman
     glEnable(GL_DEPTH_TEST);
     is_depth=1;
     glMatrixMode(GL_MODELVIEW);
+    //untuk besar titik dan tebal garis
     glPointSize(9.0);
     glLineWidth(6.0f);
 
 }
 void tampil(void)
 {
+    //untuk bisa melihat kedalam
+    //jika if-nya nyala maka gl color dan gl depth akan aktif
+    //yang dimana dapat melihat warna didalamnya
     if (is_depth)
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     else
@@ -1449,6 +1457,7 @@ void keyboard(unsigned char key, int x, int y)
 {
     switch (key)
     {
+        //setiap menekan w akan maju 3
         case 'w':
         case 'W':
             glTranslatef(0.0,0.0,3.0);
@@ -1489,15 +1498,18 @@ void keyboard(unsigned char key, int x, int y)
         case '3':
            glRotatef(-2.0,0.0,0.0,1.0);
             break;
-
+        //4 dan 6 rotasi sumbu x dan y
         case '5':
+        //
             if (is_depth)
             {
+                //disable deptestnya
                 is_depth=0;
                 glDisable(GL_DEPTH_TEST);
             }
             else
             {
+
                 is_depth = 1;
                 glEnable(GL_DEPTH_TEST);
             }
