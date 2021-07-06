@@ -1,3 +1,7 @@
+// 672019087	Anugramidah Limbong Ma'dika (Ketua Kelompok)
+// 672019266	Emanuel Pabianan
+// 672019261	Junior Silambi 
+// 672019272	Briliant Jeremy Pairunan
 #include<windows.h>
 #include<gl/glut.h>
 
